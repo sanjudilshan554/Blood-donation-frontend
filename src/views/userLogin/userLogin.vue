@@ -5,7 +5,7 @@
       <div class="form-box">
         <div class="form-value">
           <form @submit.prevent autocomplete="off">
-            <h2>Student Login</h2>
+            <h2>User Login</h2>
 
             <label class="placeholder">Email</label>
             <div class="set">
@@ -133,7 +133,7 @@ h2 {
 }
 
 body {
-  background-image: url("@/assets/test6.jpg");
+  background-image: url("@/assets/regwall.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -205,6 +205,7 @@ input::placeholder {
 input {
   color: aliceblue;
   background-color: transparent;
+  border-color: transparent;
 }
 
 input::before {

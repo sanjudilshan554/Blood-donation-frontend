@@ -421,7 +421,7 @@
 
 </template>
 
-<style>
+<style scoped>
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
