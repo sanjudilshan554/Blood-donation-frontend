@@ -37,7 +37,7 @@
 
             <div class="register">
               <p>
-                Dont' have an accout<a href="/student/register"> Register</a>
+                Dont' have an accout<a href="/userRegistraion"> Register</a>
               </p>
             </div>
           </form>

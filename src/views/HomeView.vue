@@ -26,14 +26,14 @@
       </button>
       <div class="navtitle pr-5"><b>BLOOD</b> donation</div>
 
-      <a href="/createPost" class="new">Find Donater</a>
-      <a href="/learns" class="new">View time line</a>
-      <a href="/kuppiRequest" class="new">Create post</a>
+      <a href="/bloodRequest" class="new">Find Donater</a>
+      <a href="/" class="new">View time line</a>
+      <a href="/" class="new">Create post</a>
 
       <div class="bs">
         <a href="/user/profile">
           <button
-            class="btn btn-success "
+            class="btn btn-success"
             type="button"
             data-mdb-ripple-color="dark"
           >
@@ -42,7 +42,7 @@
         >
         <a href="/user/profile">
           <button
-            class="btn btn-danger "
+            class="btn btn-danger"
             type="button"
             data-mdb-ripple-color="dark"
           >
@@ -56,13 +56,7 @@
 
         <form class="d-flex input-group w-auto">
           <a href="/userProfile">
-            <button
-              class="btn btn-white"
-              type="button"
-             
-            >
-              user Profile
-            </button></a
+            <button class="btn btn-white" type="button">user Profile</button></a
           >
 
           <button
@@ -876,8 +870,7 @@ section .section-title {
   position: relative;
   transition: 200ms;
   background-color: #333;
-  color:#eee;
-
+  color: #eee;
 }
 
 .news:hover {
@@ -910,7 +903,7 @@ html {
   background-color: rgb(250, 244, 244);
   color: #333;
 }
-a{
+a {
   border-radius: 15px;
   background-color: #f6ebeb;
 }
@@ -927,9 +920,9 @@ section {
 }
 
 .bs {
-padding-left: 25vh;
-text-align: center;
-justify-content: center;
-align-items: center;
+  padding-left: 25vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 </style>
