@@ -5,6 +5,7 @@ import userLog from '../views/userLogin/userLogin.vue'
 import test from '../views/Test/test.vue'
 import userProfile from '../views/userProfile/userProfile.vue'
 import bloodRequest from '../views/BloodRequest/bloodRequest.vue'
+import otherRequested from '../views/RecfromOther/RFO.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -41,6 +42,11 @@ const router = createRouter({
       path: '/bloodRequest',
       name: 'bloodRequest',
       component:bloodRequest
+    },
+    {
+      path: '/otherRequested',
+      name: 'otherRequested',
+      component:otherRequested
     },
   ]
 })

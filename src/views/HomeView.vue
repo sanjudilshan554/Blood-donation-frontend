@@ -40,7 +40,7 @@
             Accepterd( )
           </button></a
         >
-        <a href="/user/profile">
+        <a href="/otherRequested">
           <button
             class="btn btn-danger"
             type="button"
@@ -55,8 +55,8 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
         <form class="d-flex input-group w-auto">
-          <a href="/userProfile">
-            <button class="btn btn-white" type="button">user Profile</button></a
+          <a href="/userProfile" class="cds">
+            <button class="btn btn-white " type="button">user Profile</button></a
           >
 
           <button
@@ -904,7 +904,7 @@ html {
   color: #333;
 }
 a {
-  border-radius: 15px;
+  
   background-color: #f6ebeb;
 }
 .navtitle {
@@ -925,4 +925,10 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.cds{
+  border-radius: 15px;
+}
+
+
 </style>
