@@ -31,13 +31,13 @@
       <a href="/" class="new">Create post</a>
 
       <div class="bs">
-        <a href="/user/profile">
+        <a href="/accepted">
           <button
             class="btn btn-success"
             type="button"
             data-mdb-ripple-color="dark"
           >
-            Accepterd( )
+            Accepterd({{ acceptcount }})
           </button></a
         >
         <a href="/otherRequested">
@@ -46,7 +46,7 @@
             type="button"
             data-mdb-ripple-color="dark"
           >
-            Requested( )
+            Requested({{ requestcount }})
           </button></a
         >
       </div>
@@ -56,7 +56,7 @@
 
         <form class="d-flex input-group w-auto">
           <a href="/userProfile" class="cds">
-            <button class="btn btn-white " type="button">user Profile</button></a
+            <button class="btn btn-white" type="button">user Profile</button></a
           >
 
           <button
@@ -201,7 +201,7 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png"
+                        src="@/assets/cover1.jpg"
                         alt="card image"
                       />
                     </p>
@@ -286,7 +286,7 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png"
+                        src="@/assets/cover1.jpg"
                         alt="card image"
                       />
                     </p>
@@ -371,7 +371,7 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg"
+                        src="@/assets/cover1.jpg"
                         alt="card image"
                       />
                     </p>
@@ -456,7 +456,7 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png"
+                        src="@/assets/cover1.jpg"
                         alt="card image"
                       />
                     </p>
@@ -541,7 +541,7 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg"
+                        src="@/assets/cover1.jpg"
                         alt="card image"
                       />
                     </p>
@@ -644,7 +644,41 @@
 
   <!-- Team -->
 </template>
-<script></script>
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      form: {
+        localid: "",
+      },
+      acceptcount: "",
+      requestcount: "",
+    };
+  },
+
+  mounted() {
+    let user = localStorage.getItem("userDetails");
+    user = JSON.parse(user);
+    this.form.localid = user.id;
+    axios
+      .post("http://127.0.0.1:8000/api/acceptedforhome", this.form)
+      .then((response) => {
+        if (response.status == "200") {
+          this.acceptcount = response.data.data;
+          this.requestcount = response.data.data2;
+        }
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
+</script>
+
 <style scoped>
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 #team {
@@ -904,7 +938,6 @@ html {
   color: #333;
 }
 a {
-  
   background-color: #f6ebeb;
 }
 .navtitle {
@@ -926,9 +959,7 @@ section {
   align-items: center;
 }
 
-.cds{
+.cds {
   border-radius: 15px;
 }
-
-
 </style>
