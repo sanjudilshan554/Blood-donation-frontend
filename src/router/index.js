@@ -7,6 +7,8 @@ import userProfile from '../views/userProfile/userProfile.vue'
 import bloodRequest from '../views/BloodRequest/bloodRequest.vue'
 import otherRequested from '../views/RecfromOther/RFO.vue'
 import accepted from '../views/Accepted/accepted.vue'
+import viewPost from '../views/ViewPost/viewpost.vue'
+import createTimeline from '../views/createTimeline/createTimeline.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -53,6 +55,17 @@ const router = createRouter({
       path: '/accepted',
       name: 'accepted',
       component:accepted
+    },
+     
+     {
+      path: '/viewPost',
+      name: 'viewPost',
+      component:viewPost
+    },
+      {
+      path: '/createTimeline',
+      name: 'createTimeline',
+      component:createTimeline
     },
   ]
 })

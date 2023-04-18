@@ -120,16 +120,16 @@
             <div class="card-body text-center">
               <div class="row">
                 <div class="col-4 border-end border-light">
-                  <h5 class="text-muted mt-1 mb-2 fw-normal">Donated</h5>
-                  <h2 class="mb-0 fw-bold">116</h2>
+                  <h5 class="text-muted mt-1 mb-2 fw-normal">Accepted</h5>
+                  <h2 class="mb-0 fw-bold">{{acceptcount}}</h2>
                 </div>
                 <div class="col-4 border-end border-light">
-                  <h5 class="text-muted mt-1 mb-2 fw-normal">Received</h5>
-                  <h2 class="mb-0 fw-bold">87</h2>
+                  <h5 class="text-muted mt-1 mb-2 fw-normal">Request</h5>
+                  <h2 class="mb-0 fw-bold">{{requestcount}}</h2>
                 </div>
                 <div class="col-4">
                   <h5 class="text-muted mt-1 mb-2 fw-normal">Remain</h5>
-                  <h2 class="mb-0 fw-bold">98</h2>
+                  <h2 class="mb-0 fw-bold">{{remainrequest}}</h2>
                 </div>
               </div>
             </div>
@@ -141,10 +141,14 @@
           <div class="card">
             <div class="card-body">
               <h4 class="header-title mb-3">
-                Receivers <i class="mdi mdi-account-multiple ms-1"></i>
+                Accepter <i class="mdi mdi-account-multiple ms-1"></i>
               </h4>
 
-              <div class="list-group">
+              <div
+                class="list-group"
+                v-for="values in acceptedDetails"
+                :key="values.id"
+              >
                 <a href="#" class="list-group-item list-group-item-action">
                   <div
                     class="d-flex align-items-center pb-1"
@@ -157,64 +161,19 @@
                     />
                     <div class="w-100 ms-2">
                       <h5 class="mb-1">
-                        Herbert Stewart<i
-                          class="mdi mdi-check-decagram text-info ms-1"
-                        ></i>
+                        {{ values.Accepter_name
+                        }}<i class="mdi mdi-check-decagram text-info ms-1"></i>
                       </h5>
-                      <p class="mb-0 font-13 text-muted">Co Founder</p>
+                      <p class="mb-0 font-13 text-muted">
+                        Accepter mail: {{ values.email }}
+                      </p>
+                      <p class="mb-0 font-13 text-muted">
+                        Accepted date: {{ values.created_at }}
+                      </p>
                     </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div
-                    class="d-flex align-items-center pb-1"
-                    id="tooltips-container"
-                  >
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                      class="rounded-circle img-fluid avatar-md img-thumbnail bg-transparent"
-                      alt=""
-                    />
-                    <div class="w-100 ms-2">
-                      <h5 class="mb-1">Terry Mouser</h5>
-                      <p class="mb-0 font-13 text-muted">Web Designer</p>
-                    </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div
-                    class="d-flex align-items-center pb-1"
-                    id="tooltips-container"
-                  >
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar8.png"
-                      class="rounded-circle img-fluid avatar-md img-thumbnail bg-transparent"
-                      alt=""
-                    />
-                    <div class="w-100 ms-2">
-                      <h5 class="mb-1">Adam Barney</h5>
-                      <p class="mb-0 font-13 text-muted">PHP Developer</p>
-                    </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div
-                    class="d-flex align-items-center pb-1"
-                    id="tooltips-container"
-                  >
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                      class="rounded-circle img-fluid avatar-md img-thumbnail bg-transparent"
-                      alt=""
-                    />
-                    <div class="w-100 ms-2">
-                      <h5 class="mb-1">Michal Chang</h5>
-                      <p class="mb-0 font-13 text-muted">UI/UX Designer</p>
-                    </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
+                    <i class="mdi mdi-chevron-right h2"
+                      >{{ values.Accepter_blood_type }}
+                    </i>
                   </div>
                 </a>
               </div>
@@ -226,11 +185,18 @@
               </div>
 
               <h4 class="header-title mb-3">
-                Donaters <i class="mdi mdi-account-multiple ms-1"></i>
+                Remain Request <i class="mdi mdi-account-multiple ms-1"></i>
               </h4>
 
-              <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
+              <div
+                class="list-group"
+                v-for="values in requesterdetail"
+                :key="values.id"
+              >
+                <a
+                  href="/otherRequested"
+                  class="list-group-item list-group-item-action"
+                >
                   <div
                     class="d-flex align-items-center pb-1"
                     id="tooltips-container"
@@ -242,72 +208,26 @@
                     />
                     <div class="w-100 ms-2">
                       <h5 class="mb-1">
-                        Herbert Stewart<i
-                          class="mdi mdi-check-decagram text-info ms-1"
-                        ></i>
+                        {{ values.Requester_name
+                        }}<i class="mdi mdi-check-decagram text-info ms-1"></i>
                       </h5>
-                      <p class="mb-0 font-13 text-muted">Co Founder</p>
+                      <p class="mb-0 font-13 text-muted">
+                        {{ values.Requester_mail }}
+                      </p>
+                      <p class="mb-0 font-13 text-muted">
+                        {{ values.created_at }}
+                      </p>
                     </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
+                    <i class="mdi mdi-chevron-right h2">{{
+                      values.bloodtype
+                    }}</i>
                   </div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div
-                    class="d-flex align-items-center pb-1"
-                    id="tooltips-container"
-                  >
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                      class="rounded-circle img-fluid avatar-md img-thumbnail bg-transparent"
-                      alt=""
-                    />
-                    <div class="w-100 ms-2">
-                      <h5 class="mb-1">Terry Mouser</h5>
-                      <p class="mb-0 font-13 text-muted">Web Designer</p>
-                    </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
-                  </div>
+              </div>
+              <div class="text-center">
+                <a href="javascript:void(0);" class="text-danger"
+                  ><i class="mdi mdi-spin mdi-loading me-1"></i> Load more
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div
-                    class="d-flex align-items-center pb-1"
-                    id="tooltips-container"
-                  >
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar8.png"
-                      class="rounded-circle img-fluid avatar-md img-thumbnail bg-transparent"
-                      alt=""
-                    />
-                    <div class="w-100 ms-2">
-                      <h5 class="mb-1">Adam Barney</h5>
-                      <p class="mb-0 font-13 text-muted">PHP Developer</p>
-                    </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div
-                    class="d-flex align-items-center pb-1"
-                    id="tooltips-container"
-                  >
-                    <img
-                      src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                      class="rounded-circle img-fluid avatar-md img-thumbnail bg-transparent"
-                      alt=""
-                    />
-                    <div class="w-100 ms-2">
-                      <h5 class="mb-1">Michal Chang</h5>
-                      <p class="mb-0 font-13 text-muted">UI/UX Designer</p>
-                    </div>
-                    <i class="mdi mdi-chevron-right h2"></i>
-                  </div>
-                </a>
-
-                <div class="text-center">
-                  <a href="javascript:void(0);" class="text-danger"
-                    ><i class="mdi mdi-spin mdi-loading me-1"></i> Load more
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -325,12 +245,20 @@ export default {
   data() {
     return {
       form: {
+        localid: "",
+        userids: "",
+        currentLocalId: "",
         id: "",
         name: "",
         email: "",
         address: "",
         contact: "",
       },
+      acceptcount: "",
+      requestcount: "",
+      remainrequest:"",
+      acceptedDetails: [],
+      requesterdetail: [],
     };
   },
 
@@ -348,6 +276,52 @@ export default {
       this.form.address = user.address;
       this.form.contact = user.contactno;
     },
+  },
+
+  mounted() {
+    let user = localStorage.getItem("userDetails");
+    user = JSON.parse(user);
+    this.form.currentLocalId = user.id;
+    this.form.userids = user.id;
+    this.form.localid = user.id;
+
+    axios
+      .post("http://127.0.0.1:8000/api/accepted", this.form)
+      .then((response) => {
+        if (response.status == "200") {
+          this.acceptedDetails = response.data.data;
+        }
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+
+    axios
+      .post("http://127.0.0.1:8000/api/requestFromOthers", this.form)
+      .then((response) => {
+        if (response.status == "200") {
+          this.requesterdetail = response.data.data;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+      axios
+      .post("http://127.0.0.1:8000/api/acceptedforhome", this.form)
+      .then((response) => {
+        if (response.status == "200") {
+          this.acceptcount = response.data.data;
+          this.requestcount = response.data.data2;
+          this.remainrequest = response.data.data3;
+        }
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+
   },
 };
 </script>

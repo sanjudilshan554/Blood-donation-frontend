@@ -27,8 +27,8 @@
       <div class="navtitle pr-5"><b>BLOOD</b> donation</div>
 
       <a href="/bloodRequest" class="new">Find Donater</a>
-      <a href="/" class="new">View time line</a>
-      <a href="/" class="new">Create post</a>
+      <a href="/viewPost" class="new">View time line</a>
+      <a href="/createTimeline" class="new">Create post</a>
 
       <div class="bs">
         <a href="/accepted">
@@ -121,7 +121,7 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="@/assets/cover1.jpg"
+                        src="@/assets/head.jpg"
                         alt="card image"
                       />
                     </p>
@@ -201,14 +201,13 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="@/assets/cover1.jpg"
+                        src="@/assets/customer.jpg"
                         alt="card image"
                       />
                     </p>
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Customer care</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.
+                      Get the customer care service
                     </p>
                     <a
                       href="https://www.fiverr.com/share/qb8D02"
@@ -221,12 +220,9 @@
               <div class="backside">
                 <div class="card">
                   <div class="card-body text-center mt-4">
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Customer care</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.This is basic card with image on top, title,
-                      description and button.This is basic card with image on
-                      top, title, description and button.
+                      Contact our customer care for any of the question on this web page
                     </p>
                     <ul class="list-inline">
                       <li class="list-inline-item">
@@ -286,14 +282,13 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="@/assets/cover1.jpg"
+                        src="@/assets/images.jpg"
                         alt="card image"
                       />
                     </p>
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Head medical officer</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.
+                      Ask any medical problem 
                     </p>
                     <a
                       href="https://www.fiverr.com/share/qb8D02"
@@ -306,12 +301,9 @@
               <div class="backside">
                 <div class="card">
                   <div class="card-body text-center mt-4">
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Head medical officer</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.This is basic card with image on top, title,
-                      description and button.This is basic card with image on
-                      top, title, description and button.
+                      You can contact our head medical officer work hour (7 x 24)
                     </p>
                     <ul class="list-inline">
                       <li class="list-inline-item">
@@ -371,14 +363,13 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="@/assets/cover1.jpg"
+                        src="@/assets/branch.jpg"
                         alt="card image"
                       />
                     </p>
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Branch manager</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.
+                      Anything to know about our branches 
                     </p>
                     <a
                       href="https://www.fiverr.com/share/qb8D02"
@@ -393,10 +384,7 @@
                   <div class="card-body text-center mt-4">
                     <h4 class="card-title">Sunlimetech</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.This is basic card with image on top, title,
-                      description and button.This is basic card with image on
-                      top, title, description and button.
+                      You can donate your blood with connecting our braches. its (24x7) free service 
                     </p>
                     <ul class="list-inline">
                       <li class="list-inline-item">
@@ -456,14 +444,13 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="@/assets/cover1.jpg"
+                        src="@/assets/recep.jpg"
                         alt="card image"
                       />
                     </p>
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Reception</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.
+                      Contact reception
                     </p>
                     <a
                       href="https://www.fiverr.com/share/qb8D02"
@@ -476,12 +463,10 @@
               <div class="backside">
                 <div class="card">
                   <div class="card-body text-center mt-4">
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Reception</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.This is basic card with image on top, title,
-                      description and button.This is basic card with image on
-                      top, title, description and button.
+                      If you want to know somthing about also you can contact reception.
+
                     </p>
                     <ul class="list-inline">
                       <li class="list-inline-item">
@@ -541,14 +526,13 @@
                     <p>
                       <img
                         class="img-fluid"
-                        src="@/assets/cover1.jpg"
+                        src="@/assets/event.jpg"
                         alt="card image"
                       />
                     </p>
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Event Coordinator</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.
+                      Event Organization
                     </p>
                     <a
                       href="https://www.fiverr.com/share/qb8D02"
@@ -561,12 +545,9 @@
               <div class="backside">
                 <div class="card">
                   <div class="card-body text-center mt-4">
-                    <h4 class="card-title">Sunlimetech</h4>
+                    <h4 class="card-title">Event Coordinator</h4>
                     <p class="card-text">
-                      This is basic card with image on top, title, description
-                      and button.This is basic card with image on top, title,
-                      description and button.This is basic card with image on
-                      top, title, description and button.
+                      You can coordinate any things like blood donation camp,Awareness Programs,To Hep the needy or somethings good thigns you can coordinate with our coordinator.if it's your idea good we'll sponcer to that.
                     </p>
                     <ul class="list-inline">
                       <li class="list-inline-item">
@@ -624,14 +605,7 @@
         <h5 class="name-profession card-title">About</h5>
       </h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt
-        in culpa qui officia deserunt mollit anim id est laborum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.
+        A blood donation occurs when a person voluntarily has blood drawn and used for transfusions and/or made into biopharmaceutical medications by a process called fractionation (separation of whole blood components). Donation may be of whole blood, or of specific components directly (apheresis). Blood banks often participate in the collection process as well as the procedures that follow it.
       </p>
     </div>
   </div>
@@ -663,6 +637,7 @@ export default {
     let user = localStorage.getItem("userDetails");
     user = JSON.parse(user);
     this.form.localid = user.id;
+
     axios
       .post("http://127.0.0.1:8000/api/acceptedforhome", this.form)
       .then((response) => {
@@ -675,6 +650,16 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+
+  methods: {
+    logout() {
+      // let user = localStorage.getItem("userDetails");
+      // user = JSON.parse(user);
+
+      localStorage.removeItem("userDetails");
+      this.$router.push({ name: "userLogin" });
+    },
   },
 };
 </script>
